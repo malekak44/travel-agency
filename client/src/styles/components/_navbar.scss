@@ -1,0 +1,119 @@
+.navbar {
+    z-index: 1;
+    position: relative;
+
+    &.open {
+        .navbar__toggle {
+            >span:first-child {
+                transform: rotate(45deg);
+            }
+
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+
+            >span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        padding: 1.5rem;
+        background: $white;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint-up(large) {
+            padding: 2rem 7rem;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 24px;
+
+            @include breakpoint-up(large) {
+                width: 30px;
+            }
+        }
+
+        h1 {
+            color: $shushi;
+            font-size: 22px;
+            font-weight: 700;
+
+            @include breakpoint-up(large) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    &__toggle {
+        cursor: pointer;
+
+        >span {
+            width: 24px;
+            height: 2px;
+            display: block;
+            background: $shushi;
+            transform-origin: 2px 1px;
+            transition: all 300ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__menu {
+        left: 50%;
+        padding: 1rem;
+        display: block;
+        margin-top: 2rem;
+        position: absolute;
+        background: $white;
+        border-radius: 5px;
+        width: calc(100% - 5rem);
+        transform: translateX(-50%);
+
+        a {
+            display: block;
+            color: $shushi;
+            font-weight: 500;
+            padding: 0.75rem;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $christi;
+            }
+        }
+
+        @include breakpoint-up(large) {
+            display: none;
+        }
+    }
+
+    &__links {
+        a {
+            color: $shushi;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $christi;
+            }
+
+            &:not(:last-child) {
+                margin-right: 2.5rem;
+            }
+        }
+    }
+}
