@@ -1,0 +1,32 @@
+.section__intro {
+    margin-top: 3rem;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+        margin-top: 5rem;
+    }
+
+    h3 {
+        color: $shushi;
+        font-weight: 500;
+        line-height: 1.2;
+        text-shadow: none;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        color: $black;
+        font-weight: 600;
+        font-size: 1.65rem;
+
+        @include breakpoint-up(large) {
+            font-size: 2.3rem;
+        }
+
+        span {
+            display: block;
+            line-height: 1.4;
+        }
+    }
+}
