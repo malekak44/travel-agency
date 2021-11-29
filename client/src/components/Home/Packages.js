@@ -1,18 +1,15 @@
 import React from 'react';
-import calender from '../../assets/calendar.svg';
-import location from '../../assets/location.svg';
+import PackageCard from '../PackageCard';
+import { useGlobalContext } from '../../contexts/AppContext';
 
 const Packages = () => {
+    const { packages } = useGlobalContext();
+
     return (
-        <section className="packages">
-            <div class="package__card">
-                {/* <img src=''/> */}
-                <p><span class="price">$180</span>/Per Person</p>
-                <p><img src={calender} alt="calendar" /> 5 days/6 nights</p>
-                <h5>
-                    <img src={location} alt="map" />Eiffel Power, Paris, France
-                </h5>
-            </div>
+        <section className="home__packages container">
+            {packages.map((item) => {
+                return <PackageCard key={item._id} {...item} />
+            })}
         </section>
     );
 };

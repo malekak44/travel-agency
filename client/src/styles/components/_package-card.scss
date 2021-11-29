@@ -1,0 +1,60 @@
+.package__card {
+    width: 90%;
+    margin-bottom: 2rem;
+    border-radius: 0.3125rem;
+    box-shadow: var(--card-shadow);
+
+    @include breakpoint-up(large) {
+        width: 31.5%;
+        margin-bottom: 0;
+    }
+
+    &__image {
+        height: 15rem;
+        overflow: hidden;
+        border-top-left-radius: 0.3125rem;
+        border-top-right-radius: 0.3125rem;
+
+        img {
+            width: 100%;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                transform: scale(1.25);
+            }
+        }
+    }
+
+    &__info {
+        padding: 1.5rem 1rem;
+
+        &__pricing {
+            @include flexbox(center, space-between);
+
+            p {
+                font-weight: 600;
+                @include flexbox(center, center);
+
+                img {
+                    width: 0.9375rem;
+                    margin-right: 0.3125rem;
+                }
+
+                span {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        h3 {
+            margin-top: 1rem;
+            font-weight: 500;
+            @include flexbox(center, center);
+
+            img {
+                width: 1.375rem;
+                margin-right: 0.25rem;
+            }
+        }
+    }
+}

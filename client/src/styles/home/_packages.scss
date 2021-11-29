@@ -1,0 +1,9 @@
+.home__packages {
+    margin: 8rem auto;
+    flex-direction: column;
+    @include flexbox(center, space-between);
+
+    @include breakpoint-up(large) {
+        flex-direction: row;
+    }
+}

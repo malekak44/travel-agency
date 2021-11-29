@@ -25,7 +25,6 @@
                 color: $black;
                 font-weight: 500;
                 font-size: 1.75rem;
-                text-shadow: var(--text-shadow);
 
                 @include breakpoint-up(large) {
                     font-size: 2.5rem;
@@ -40,6 +39,7 @@
             p {
                 color: $paleSky;
                 line-height: 1.6;
+                text-shadow: none;
                 margin: 0.7rem 0 1.2rem;
 
                 @include breakpoint-up(large) {
