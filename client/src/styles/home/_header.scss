@@ -1,0 +1,66 @@
+.home__header {
+    padding-bottom: 2.5rem;
+    flex-direction: column;
+    @include flexbox(center, space-between);
+
+    @include breakpoint-up(large) {
+        flex-direction: row;
+        padding-bottom: 1.75rem;
+    }
+
+    &__text {
+        flex: 1;
+        text-align: center;
+        @include flexbox(center, center);
+
+        @include breakpoint-up(large) {
+            text-align: left;
+            @include flexbox(center, flex-start);
+        }
+
+        &__wrapper {
+            width: 85%;
+
+            h1 {
+                color: $black;
+                font-weight: 500;
+                font-size: 1.75rem;
+                text-shadow: var(--text-shadow);
+
+                @include breakpoint-up(large) {
+                    font-size: 2.5rem;
+                }
+
+                span {
+                    display: block;
+                    line-height: 1.4;
+                }
+            }
+
+            p {
+                color: $paleSky;
+                line-height: 1.6;
+                margin: 0.7rem 0 1.2rem;
+
+                @include breakpoint-up(large) {
+                    margin: 0.5rem 0 1.35rem;
+                }
+            }
+        }
+    }
+
+    &__image {
+        flex: 1;
+        order: -1;
+        margin: 1rem 0;
+
+        @include breakpoint-up(large) {
+            order: 0;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

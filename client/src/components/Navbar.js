@@ -16,7 +16,7 @@ const Navbar = () => {
     }, [isNavbarOpen]);
 
     return (
-        <section className={`navbar ${isNavbarOpen ? 'open' : ''}`}>
+        <section className={`navbar container ${isNavbarOpen ? 'open' : ''}`}>
             <div
                 onClick={closeNavbar}
                 className={isNavbarOpen ? 'overlay has-fade fade-in' : 'overlay has-fade fade-out'}

@@ -1,3 +1,9 @@
+@mixin flexbox($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
 // 640px, 1024px, 1400px
 $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
 
