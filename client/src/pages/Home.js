@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import WhyUs from '../components/Home/WhyUs';
 import Header from '../components/Home/Header';
+import Footer from '../components/Home/Footer';
 import Packages from '../components/Home/Packages';
 import Services from '../components/Home/Services';
 
@@ -15,6 +16,7 @@ const Home = () => {
             <Packages />
             <Services />
             <WhyUs />
+            <Footer />
         </>
     );
 };
