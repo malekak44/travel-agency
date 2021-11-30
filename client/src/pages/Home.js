@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Header from '../components/Home/Header';
 import Packages from '../components/Home/Packages';
+import Services from '../components/Home/Services';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
                 <Header />
             </section>
             <Packages />
+            <Services />
         </>
     );
 };

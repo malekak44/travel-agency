@@ -7,6 +7,7 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [packages, setPackages] = useState([]);
+    const [services, setServices] = useState([]);
 
     const getHomePackages = async () => {
         try {
@@ -17,16 +18,26 @@ const AppProvider = ({ children }) => {
         }
     }
 
+    const getHomeServices = async () => {
+        try {
+            const { data } = await axios.get(`${url}/services/home`);
+            setServices(data.services);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     useEffect(() => {
         getHomePackages();
+        getHomeServices();
         setIsLoading(false);
     }, []);
 
     return (
         <AppContext.Provider value={{
             packages,
+            services,
             isLoading,
-            getHomePackages,
         }}>
             {children}
         </AppContext.Provider>
