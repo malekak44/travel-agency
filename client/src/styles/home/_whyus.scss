@@ -1,0 +1,50 @@
+.home__whyus {
+    padding: 4rem 0;
+    background-color: #FDFDFD;
+    background-image: linear-gradient(rgba(245, 245, 245, 0.2) 100%, rgba(245, 245, 245, 0.2) 100%),
+        url('../../assets/map.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .section__intro {
+        margin-top: 0;
+    }
+
+    .container {
+        margin-top: 3rem;
+        flex-direction: column;
+        @include flexbox(center, space-between);
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+        }
+    }
+
+    &__card {
+        width: 90%;
+        color: $white;
+        padding: 1.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        background: $overlay;
+        border-radius: 0.3125rem;
+        box-shadow: 0px 0px 64px rgba(17, 17, 17, 0.1);
+
+        @include breakpoint-up(large) {
+            width: 23.25%;
+            margin-bottom: 0;
+        }
+
+        h5 {
+            font-weight: 700;
+            line-height: 2rem;
+            font-size: 1.375rem;
+            margin-top: 1.25rem;
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+}
