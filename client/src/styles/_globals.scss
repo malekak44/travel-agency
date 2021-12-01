@@ -63,6 +63,10 @@ a {
     }
 }
 
+input[type="submit"] {
+    @extend .btn;
+}
+
 .hide-for-mobile {
     @include breakpoint-down(medium) {
         display: none !important;

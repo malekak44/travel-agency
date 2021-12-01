@@ -1,0 +1,65 @@
+.content {
+    height: 100vh;
+    text-shadow: none;
+    margin-left: 18rem;
+    background: #F3F5F9;
+    width: calc(100% - 18rem);
+
+    &__title {
+        background: $white;
+        padding: 1.2rem 4rem;
+    }
+
+    &__form {
+        width: 50%;
+        margin: 4%;
+        font-weight: 500;
+
+        &__row {
+            @include flexbox(center, space-between);
+
+            input {
+                &:first-child {
+                    margin-right: 0.75rem;
+                }
+
+                &:last-child {
+                    margin-left: 0.75rem;
+                }
+            }
+
+            &.payment {
+                margin: 1.4rem 0;
+            }
+
+            &.submit {
+                align-items: baseline;
+
+                P {
+                    span {
+                        font-weight: 700;
+                        margin-left: 4px;
+                    }
+                }
+
+                input {
+                    width: 72px;
+                    border: none;
+                }
+            }
+        }
+
+        &__group {
+            label {
+
+                @include flexbox(center, center);
+
+                img {
+                    width: 25px;
+                    margin-top: -3px;
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+}
