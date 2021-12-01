@@ -1,9 +1,10 @@
 import React from 'react';
 import Home from './pages/Home';
+import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 import Dashboard from './pages/Dashboard';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useGlobalContext } from './contexts/AppContext';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   const { isLoading } = useGlobalContext();
@@ -18,6 +19,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
