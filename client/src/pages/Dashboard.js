@@ -1,12 +1,12 @@
 import React from 'react';
-import Book from '../components/Dashboard/Book';
+import Review from '../components/Dashboard/Review';
 import SideNav from '../components/Dashboard/SideNav';
 
 const Dashboard = () => {
     return (
         <>
             <SideNav />
-            <Book />
+            <Review />
         </>
     );
 };

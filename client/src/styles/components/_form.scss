@@ -1,5 +1,6 @@
 form {
-    input {
+    input,
+    textarea {
         width: 100%;
         color: $black;
         outline: none;
@@ -24,6 +25,12 @@ form {
 
         &[type="radio"] {
             display: none;
+        }
+
+        &[type="submit"] {
+            width: auto;
+            border: none;
+            float: right;
         }
     }
 }
