@@ -1,0 +1,47 @@
+.bookings__wrapper {
+    flex-wrap: wrap;
+    font-weight: 500;
+    padding: .5rem 2.5rem 3rem;
+    @include flexbox(center, space-between);
+
+    .booking {
+        width: 31%;
+        height: 216px;
+        padding: 20px;
+        margin-top: 2rem;
+        border-radius: 5px;
+        background: $white;
+
+        img {
+            width: 50px;
+        }
+
+        h5 {
+            margin: 8px 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .status {
+            float: right;
+            padding: 4px 6px;
+            color: #FF8E8E;
+            border-radius: 5px;
+            background: #FFE3E3;
+
+            &.green {
+                background-color: #C6FFE0;
+                color: #33AF6C;
+            }
+
+            &.orange {
+                color: #FFCC6C;
+            }
+        }
+    }
+}
