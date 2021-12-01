@@ -1,25 +1,50 @@
 import logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 
 const Navbar = () => {
+    const menuRef = useRef(null);
+    const navbarRef = useRef(null);
+    const overlayRef = useRef(null);
+    const body = document.body;
+    const menu = menuRef.current;
+    const navbar = navbarRef.current;
+    const overlay = overlayRef.current;
+    const fadeElements = [menu, overlay];
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-    const closeNavbar = () => setIsNavbarOpen(false);
 
-    useEffect(() => {
-        const body = document.body;
-        if (isNavbarOpen) {
-            body.classList.add('noscroll');
+    const closeNavbar = () => {
+        setIsNavbarOpen(false);
+        body.classList.remove("noscroll");
+        fadeElements.forEach(element => {
+            element.classList.remove("fade-in");
+            element.classList.add("fade-out");
+        });
+    }
+
+    const toggleNavbar = () => {
+        setIsNavbarOpen(!isNavbarOpen);
+
+        if (navbar.classList.contains("open")) {
+            closeNavbar();
         } else {
-            body.classList.remove('noscroll');
+            body.classList.add("noscroll");
+            fadeElements.forEach(element => {
+                element.classList.remove("fade-out");
+                element.classList.add("fade-in");
+            });
         }
-    }, [isNavbarOpen]);
+    }
 
     return (
-        <section className={`navbar container ${isNavbarOpen ? 'open' : ''}`}>
+        <section
+            ref={navbarRef}
+            className={`navbar container ${isNavbarOpen ? 'open' : ''}`}
+        >
             <div
+                ref={overlayRef}
                 onClick={closeNavbar}
-                className={isNavbarOpen ? 'overlay has-fade fade-in' : 'overlay has-fade fade-out'}
+                className="overlay has-fade"
             ></div>
             <nav>
                 <Link to="/" className="navbar__logo">
@@ -29,7 +54,7 @@ const Navbar = () => {
 
                 <div
                     className="navbar__toggle hide-for-desktop"
-                    onClick={() => setIsNavbarOpen(!isNavbarOpen)}
+                    onClick={toggleNavbar}
                 >
                     <span></span>
                     <span></span>
@@ -46,7 +71,8 @@ const Navbar = () => {
             </nav >
 
             <div
-                className={isNavbarOpen ? 'navbar__menu has-fade fade-in' : 'navbar__menu has-fade fade-out'}
+                ref={menuRef}
+                className="navbar__menu has-fade"
             >
                 <Link to="/" onClick={closeNavbar}>Home</Link>
                 <Link to="/destinations" onClick={closeNavbar}>Destinations</Link>

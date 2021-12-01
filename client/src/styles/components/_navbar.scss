@@ -19,6 +19,17 @@
         }
     }
 
+    .overlay {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        opacity: 0;
+        display: block;
+        background-image: linear-gradient($overlay, transparent);
+    }
+
     nav {
         display: flex;
         position: relative;
@@ -94,10 +105,6 @@
             &:hover {
                 color: $christi;
             }
-        }
-
-        @include breakpoint-up(large) {
-            display: none;
         }
     }
 
