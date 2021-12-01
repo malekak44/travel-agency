@@ -1,0 +1,53 @@
+.sidenav {
+    top: 0;
+    left: 0;
+    width: 18rem;
+    height: 100vh;
+    position: fixed;
+    min-width: 18rem;
+    text-shadow: none;
+    background: $christi;
+
+    &__logo {
+        margin: 2rem auto 1rem;
+        @include flexbox(center, center);
+
+        img {
+            width: 1.875rem;
+            margin-right: 0.25rem;
+        }
+
+        h1 {
+            color: $white;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 1.125rem;
+    }
+
+    &__link {
+        padding: 0.75rem 4.125rem;
+        @include flexbox(center, flex-start);
+
+        img {
+            width: 1.625rem;
+            margin-right: 0.5rem;
+
+            &.cart {
+                width: 1.5625rem;
+            }
+        }
+
+        p {
+            color: $white;
+            font-weight: 500;
+            font-size: 1.0625rem;
+        }
+
+        &.active {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    }
+}

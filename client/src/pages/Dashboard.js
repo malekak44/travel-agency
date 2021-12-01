@@ -1,10 +1,11 @@
 import React from 'react';
+import SideNav from '../components/Dashboard/SideNav';
 
 const Dashboard = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <SideNav />
+        </>
     );
 };
 
