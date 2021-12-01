@@ -1,0 +1,12 @@
+.content {
+    height: 100vh;
+    text-shadow: none;
+    margin-left: 18rem;
+    background: #F3F5F9;
+    width: calc(100% - 18rem);
+
+    &__title {
+        background: $white;
+        padding: 1.2rem 4rem;
+    }
+}

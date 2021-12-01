@@ -10,27 +10,27 @@ const Book = () => {
             <div className="content__title">
                 <h2>Book</h2>
             </div>
-            <form className="content__form">
+            <form className="dashboard__content__form">
                 <Input type="text" placeholder="Enter Full Name" />
                 <Input type="email" placeholder="Enter Email Address" />
                 <Input type="text" placeholder="Enter Service Name" />
                 <p>Pay With</p>
-                <div className="content__form__row payment">
-                    <div className="content__form__group">
+                <div className="dashboard__content__form__row payment">
+                    <div className="dashboard__content__form__group">
                         <input type="radio" name="pay-method" id="card" />
                         <label htmlFor="card">
                             <img src={credit} alt="card" />
                             <span>Credit Card</span>
                         </label>
                     </div>
-                    <div className="content__form__group">
+                    <div className="dashboard__content__form__group">
                         <input type="radio" name="pay-method" id="stripe" />
                         <label htmlFor="stripe">
                             <img src={stripe} alt="stripe" />
                             <span>Stripe</span>
                         </label>
                     </div>
-                    <div className="content__form__group">
+                    <div className="dashboard__content__form__group">
                         <input type="radio" name="pay-method" id="paypal" />
                         <label htmlFor="paypal">
                             <img src={paypal} alt="paypal" />
@@ -39,12 +39,12 @@ const Book = () => {
                     </div>
                 </div>
                 <Input type="text" placeholder="Card Number" />
-                <div className="content__form__row">
+                <div className="dashboard__content__form__row">
                     <Input type="text" placeholder="MM/ YY" />
                     <Input type="text" placeholder="CVC" />
                 </div>
-                <div className="content__form__row submit">
-                    <p>Your service charge will be 
+                <div className="dashboard__content__form__row submit">
+                    <p>Your service charge will be
                         <span>$2000</span>
                     </p>
                     <Input type="submit" value="Pay" />

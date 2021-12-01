@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
 import cart from '../../assets/cart.svg';
 import list from '../../assets/list.svg';
 import review from '../../assets/review.svg';
+import logo from '../../assets/white-logo.svg';
 
 const SideNav = () => {
     const [isActive, setIsActive] = useState('book');

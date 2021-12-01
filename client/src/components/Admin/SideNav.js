@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
 import grid from '../../assets/grid.svg';
 import order from '../../assets/order.svg';
+import logo from '../../assets/white-logo.svg';
 import addUser from '../../assets/add-user.svg';
 import addService from '../../assets/add-service.svg';
 

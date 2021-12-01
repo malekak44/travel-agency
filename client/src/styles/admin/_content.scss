@@ -1,0 +1,42 @@
+.admin__content {
+    &__form {
+        width: 90%;
+        margin: 40px auto;
+
+        &__wrapper {
+            background: white;
+            padding: 2rem 2.75rem;
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        input,
+        textarea {
+            margin-top: 1rem;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+        }
+
+        &__row {
+            @include flexbox(flex-start, space-between);
+
+            .admin__content__form__group {
+                &:first-child {
+                    margin-right: 0.75rem;
+                }
+
+                &:last-child {
+                    margin-left: 0.75rem;
+                }
+            }
+        }
+
+        &__group {
+            flex: 1;
+        }
+    }
+}
