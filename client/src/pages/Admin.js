@@ -1,12 +1,12 @@
 import React from 'react';
 import SideNav from '../components/Admin/SideNav';
-import AddService from '../components/Admin/AddService';
+import MakeAdmin from '../components/Admin/MakeAdmin';
 
 const Admin = () => {
     return (
         <>
             <SideNav />
-            <AddService />
+            <MakeAdmin />
         </>
     );
 };
